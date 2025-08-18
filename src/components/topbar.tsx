@@ -2,18 +2,31 @@
 
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Bell, ChevronRight, Search } from "lucide-react"
+import { Bell, ChevronRight, Search, SidebarIcon } from "lucide-react"
 
-export function Topbar() {
+interface TopbarProps {
+  onToggleSidebar: () => void;
+  sidebarVisible: boolean;
+}
+
+export function Topbar({ onToggleSidebar, sidebarVisible }: TopbarProps) {
   return (
-    <header className="absolute top-0 left-64 right-0 z-1 bg-background/60 backdrop-blur">
+    <header className={`absolute top-0  right-0 z-1 bg-background/60 backdrop-blur ${sidebarVisible ? " left-64" : "left-0"}`}>
       <div className=" flex h-14 items-center justify-between gap-3 px-4">
-        <div>
+        <div className="flex lg:hidden">
+
+        </div>
+        <div className="lg:flex items-center gap-4 hidden">
+          <button
+            aria-label="Toggle sidebar"
+            className="bg-transparent border-0 p-0 m-0"
+            onClick={onToggleSidebar}
+          >
+            <SidebarIcon className="h-5 w-5 cursor-pointer" color={!sidebarVisible ? "#ffffff" : "#ffffff70"} />
+          </button>
           <div className="flex items-center gap-2 text-muted-foreground">
             Dashboard <ChevronRight color="#ffffff70" size={14} /> All Courses
           </div>
-
         </div>
 
         <div className="flex items-center gap-2">

@@ -58,11 +58,11 @@ function SidebarContent() {
       <ScrollArea className="flex-1">
         <nav className="p-2 flex flex-col gap-2">
           {items.map(({ href, label, icon: Icon }) => (
-            <Link key={href} href={href}>
+            <Link key={label} href={href}>
               <Button
                 variant="ghost"
                 className={cn(
-                  "w-full justify-start gap-2",
+                  "w-full justify-start gap-2 hover:shadow-[inset_0_1px_0_0_rgba(161,161,170,0.3)]",
                   pathname === href && "bg-[#1e1e1e] shadow-[inset_0_1px_0_0_rgba(161,161,170,0.3)]"
                 )}
               >
