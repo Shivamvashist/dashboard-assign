@@ -38,9 +38,9 @@ export function CourseContent() {
         <CardTitle className="text-2xl">Course Content</CardTitle>
       </CardHeader>
       <CardContent className="px-0">
-        <Accordion type="single" collapsible className="w-full border-0 bg-[#1e1e1e66] py-2 px-6 rounded-2xl">
+        <Accordion type="single" collapsible className="w-full border-0 bg-[#1e1e1e66] py-2 px-2 rounded-2xl">
           {chapters.map((c, i) => (
-            <AccordionItem key={i} value={`item-${i}`}>
+            <AccordionItem key={i} value={`item-${i}`} className="data-[state=open]:bg-[#1e1e1e30] data-[state=open]:border-2 border-[#1e1e1e] rounded-xl px-4">
               <AccordionTrigger className="text-left border-0">
                 <div className="flex w-full items-center justify-between">
                   <span className="font-semibold">{c.title}</span>
