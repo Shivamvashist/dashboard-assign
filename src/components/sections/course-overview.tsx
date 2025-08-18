@@ -36,7 +36,7 @@ export function CourseOverview() {
       </CardHeader>
       <CardContent className="grid gap-4 md:grid-cols-2">
         {blocks.map((b) => (
-          <div key={b.title} className="rounded-xl p-4 flex flex-row gap-2">
+          <div key={b.title} className="rounded-xl p-2 flex flex-row gap-2">
             <Check className="pt-2" size={24}/>
             <div>
                 <div className="mb-2 font-semibold">{b.title}</div>
