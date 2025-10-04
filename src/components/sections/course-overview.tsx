@@ -30,17 +30,17 @@ const blocks = [
 
 export function CourseOverview() {
   return (
-    <Card className="rounded-lg border-0 bg-[#1e1e1e66] shadow-[inset_0_2px_0_0_rgba(255,255,255,0.1)]">
+    <Card className="rounded-lg border-0 bg-[#1e1e1e66]/10 shadow-[inset_0_2px_0_0_rgba(255,255,255,0.1)]">
       <CardHeader>
         <CardTitle className="text-2xl">What you&apos;ll learn</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-4 md:grid-cols-2">
         {blocks.map((b) => (
-          <div key={b.title} className="rounded-xl p-2 flex flex-row gap-2">
+          <div key={b.title} className="rounded-xl p-2 gap-2">
             <Check className="pt-2" size={24}/>
             <div>
                 <div className="mb-2 font-semibold">{b.title}</div>
-                <div className="text-sm text-muted-foreground">{b.items}</div>
+                <div className="text-xl text-muted-foreground">{b.items}</div>
             </div>
           </div>
         ))}

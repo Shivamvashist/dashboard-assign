@@ -16,17 +16,17 @@ export function CourseSummary() {
 
             <CardTitle className="flex flex-col items-baseline mt-36">
                 
-            <span className="text-xs text-muted-foreground line-through">₹5,000</span>
+            <span className="text-lg line-through font-bold">₹5,000</span>
             <div className="flex flex-row gap-2 items-baseline">
                 <span className="text-3xl font-semibold">₹2,500</span>
-                <div className="text-xs bg-white/15 px-2 rounded-sm">50% off</div>
+                <div className="text-xl bg-white/15 px-2 rounded-sm">50% off</div>
             </div>
             </CardTitle>
             
             <Image src={rating} alt="Cube Background" className="" />
         </CardHeader>
         <CardContent className="space-y-4">
-            <Button className="w-full text-white font-semibold rounded-[var(--radius-rounded-xl,12px)]
+            <Button className="w-full text-blue-300 font-semibold rounded-[var(--radius-rounded-xl,12px)]
                 bg-[linear-gradient(90deg,var(--background-brand-colors-brand-blue,#5B76DB)_0%,var(--background-brand-colors-brand-purple,#AB82EB)_100%)]
                 shadow-[inset_0_4px_4px_0_rgba(0,0,0,0.25),inset_0_1px_0_0_rgba(255,255,255,0.1)]"
             >
@@ -36,7 +36,7 @@ export function CourseSummary() {
         </CardContent>
         <CardContent>
             <span className="text-sm text-muted-foreground">This Course includes :</span>
-            <ul className="list-disc pl-5 text-sm  space-y-2 pt-2">
+            <ul className="list-disc pl-5 text-xl ">
             <li>No pre-requisite required</li>
             <li>50+ hrs on-demand video</li>
             <li>60 live lectures</li>

@@ -59,7 +59,7 @@ function SidebarContent() {
               <Button
                 variant="ghost"
                 className={cn(
-                  "w-full justify-start gap-2 hover:shadow-[inset_0_1px_0_0_rgba(161,161,170,0.3)]",
+                  "w-full justify-start gap-2 hover:bg-white",
                   pathname === href && "bg-[#1e1e1e] shadow-[inset_0_1px_0_0_rgba(161,161,170,0.3)]"
                 )}
               >

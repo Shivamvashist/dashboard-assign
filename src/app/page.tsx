@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center">
+    <div className="">
       <Link href="/dashboard">
         <Button 
           size="lg"
